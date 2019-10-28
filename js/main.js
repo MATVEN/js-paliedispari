@@ -27,3 +27,13 @@ function sum() {
 
   return result;
 }
+
+function pariDispari() {
+  if (tot %2 == 0 && x % 2 == 0) {
+    console.log('WIN!');
+  }else if (tot %2 != 0 && x % 2 != 0) {
+    console.log('WIN!');
+  }else {
+    console.log('LOSE!');
+  }
+}
