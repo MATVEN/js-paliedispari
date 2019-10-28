@@ -1,37 +1,37 @@
-//Una funzione per capire se la parola è palindroma
 //L’utente sceglie pari o dispari e un numero da 1 a 5.
 //Generiamo un numero random (sempre da 1 a 5) per il computer.
 //Sommiamo i due numeri e dichiariamo chi ha vinto.
 
 // pari o dispari
-var x = prompt('Scegli un numero pari o un numero dispari.');
+var pariDisp = prompt('Scegli un numero pari o un numero dispari.');
 
 // condition
-if (x % 2 == 0) {
+if (pariDisp % 2 == 0) {
   console.log('Pari!');
 } else {
   console.log('Dispari!');
 }
 
-var z = parseInt(prompt('Scegli un numero da 1 a 5.'));
-console.log(z);
+var numUser = parseInt(prompt('Scegli un numero da 1 a 5.'));
+console.log(numUser);
+var numCom = Math.floor(Math.random() * 5 + 1);
+console.log(numCom);
 
-var tot = sum();
+var tot = sum(numUser, numCom);
 console.log(tot);
 var winner = pariDispari();
 
-function sum() {
-  var com = Math.floor(Math.Random() * 6 + 1);
-  console.log(com);
-  result = z + com;
+function sum(num1, num2) {
+  result = num1 + num2;
 
   return result;
 }
 
+
 function pariDispari() {
-  if (tot %2 == 0 && x % 2 == 0) {
+  if (tot %2 == 0 && numUser % 2 == 0) {
     console.log('WIN!');
-  }else if (tot %2 != 0 && x % 2 != 0) {
+  }else if (tot %2 != 0 && nameUser % 2 != 0) {
     console.log('WIN!');
   }else {
     console.log('LOSE!');
